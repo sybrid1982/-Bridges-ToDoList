@@ -5,9 +5,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -28,7 +25,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 
@@ -84,15 +81,16 @@ body input::value {
 }
 
 ol {
-    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
 }
 
 ol li {
     font-size: 2em;
-}
-
-ol li:hover {
-    background-color: #eee;
+    width: 90%;
 }
 
 li button {
@@ -102,20 +100,29 @@ li button {
 .listItemClass {
     display: flex;
     flex-direction: row;
-    width: 95%;
+    width: 100%;
     margin: 10px 0px;
     align-items: center;
     height: 1.5em;
+}
+
+.grayhover:hover {
+    background-color: #eee;
 }
 
 .listItemClass > .deleteButton {
     margin-left: auto;
     height: 2em;
     border: none;
+    padding-right: 0px;
 }
 
 .listItemClass:hover > .deleteButton {
     fill: red;
+}
+
+.listItemClass:hover {
+    background-color: #eee;
 }
 
 .listItemClass .completeButton {
@@ -127,7 +134,7 @@ li button {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     margin: 0;
     margin-top: 30px;
     font-weight: 200;
@@ -135,7 +142,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.7em;
+    font-size: 1.6em;
     margin: 0;
     margin-top: 10px;
     width: 90%;

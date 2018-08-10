@@ -7,7 +7,6 @@ function ToDoListCtrl() {
         vm.list.push({text: newListItem});
     }
     vm.completeTask = (index) => {
-        console.log(`called for ${index}`);
         vm.list[index].classes = {completed: true};
     }
     vm.removeFromList = (index) => {

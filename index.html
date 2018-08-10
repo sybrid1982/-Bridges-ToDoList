@@ -19,7 +19,6 @@
             <ol>
                 <li ng-repeat='listItem in tdlist.list track by $index'>
                     <span class="listItemClass">
-                        <span>{{ $index + 1 }}.</span>
                         <button type='button' class='completeButton' ng-if="!listItem.classes.completed" ng-click="tdlist.completeTask($index);">
                             Complete
                         </button>
