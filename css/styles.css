@@ -1,14 +1,41 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 body {
     background: linear-gradient(to right, #f857a6, #ff5858);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
 }
+
 
 body > section {
     background-color: white;
-    width: 60%;
+    width: 50%;
     border-radius: 8px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
@@ -45,6 +72,7 @@ body input::placeholder {
     background-color: #ff69b4;
     color: white;
     border: none;
+    margin-bottom: 60px;
 }
 
 #addButton:hover {
@@ -83,8 +111,7 @@ li button {
 }
 
 .listItemClass:hover > .deleteButton {
-    color: red;
-    background-color: #eee;
+    fill: red;
 }
 
 .listItemClass .completeButton {
@@ -92,4 +119,17 @@ li button {
     border: #ff69b4 solid 1px;
     color: #ff69b4;
     border-radius: 8px;
+    margin-right: 15px;
+    height: 3em;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 15px;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin: 15px;
 }
