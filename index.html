@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ToDoList">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href='css/styles.css'>
+</head>
+<body>
+    <section id='mainBody'>
+        <h1>TODO List</h1>
+        <h2>A place to store the things you have to do</h2>
+        <section id='list' ng-controller="ToDoListCtrl as tdlist">
+            <input type="text" placeholder="Filter your to-dos">
+            <ol>
+                <li ng-repeat='listItem in tdlist.list track by $index'>
+                    <span class="listItemClass">
+                        <button type='button' class='completeButton' ng-if="!listItem.classes.completed" ng-click="tdlist.completeTask($index);">
+                            Complete
+                        </button>
+                        <span ng-class='listItem.classes'>{{ listItem.text }}</span>
+                        <button ng-click="tdlist.removeFromList($index);" class='deleteButton'>x</button>
+                    </span>
+                </li>
+            </ol>
+            <input type="text" placeholder="Add your to do" ng-model='addInput'>
+            <button type="button" id='addButton' ng-click="tdlist.addToList(addInput); addInput = ''; ">Add</button>
+        </section>
+    </section>
+    <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src='scripts/module.js'></script>
+    <script src='scripts/ctrl.js'></script>
+</body>
+</html>
