@@ -11,18 +11,20 @@
 </head>
 <body>
     <section id='mainBody'>
-        <h1>TODO List</h1>
-        <h2>A place to store the things you have to do</h2>
         <section id='list' ng-controller="ToDoListCtrl as tdlist">
+            <h1>TODO List</h1>
+            <h2>A place to store the things you have to do</h2>
+        
             <input type="text" placeholder="Filter your to-dos">
             <ol>
                 <li ng-repeat='listItem in tdlist.list track by $index'>
                     <span class="listItemClass">
+                        <span>{{ $index + 1 }}.</span>
                         <button type='button' class='completeButton' ng-if="!listItem.classes.completed" ng-click="tdlist.completeTask($index);">
                             Complete
                         </button>
                         <span ng-class='listItem.classes'>{{ listItem.text }}</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ng-click="tdlist.removeFromList($index);" class='deleteButton'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" ng-click="tdlist.removeFromList($index);" class='deleteButton'>
                             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
                             <path d="M0 0h24v24H0z" fill="none"/>
                         </svg>
