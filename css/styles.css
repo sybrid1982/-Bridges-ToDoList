@@ -85,12 +85,12 @@ ol {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 90%;
 }
 
 ol li {
     font-size: 2em;
-    width: 90%;
+    width: 85%;
 }
 
 li button {
@@ -104,6 +104,7 @@ li button {
     margin: 10px 0px;
     align-items: center;
     height: 1.5em;
+    border-radius: 8px;
 }
 
 .grayhover:hover {
