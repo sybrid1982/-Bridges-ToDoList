@@ -111,15 +111,20 @@ li button {
     background-color: #eee;
 }
 
-.listItemClass > .deleteButton {
+.listItemClass > .span__buttons {
     margin-left: auto;
     height: 2em;
+    width: 4.5em;
     border: none;
     padding-right: 0px;
 }
 
-.listItemClass:hover > .deleteButton {
+.listItemClass:hover > .span__buttons > .deleteButton {
     fill: red;
+}
+
+.listItemClass:hover > .span__buttons > .editButton {
+    fill: lightgreen;
 }
 
 .listItemClass:hover {
@@ -132,6 +137,19 @@ li button {
     border-radius: 8px;
     margin: 0px 15px;
     height: 2.5em;
+}
+
+.listItemClass .editInput {
+    font-size: .7em;
+    border: none;
+    background-color: none;
+    width: 60%;
+}
+
+.listItemClass .span__text {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
 }
 
 h1 {
