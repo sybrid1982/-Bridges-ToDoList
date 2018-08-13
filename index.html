@@ -15,9 +15,9 @@
             <h1>TODO List</h1>
             <h2>A place to store the things you have to do</h2>
         
-            <input type="text" placeholder="Filter your to-dos">
+            <input type="text" placeholder="Filter your to-dos" ng-model="toDoFilter">
             <ol>
-                <li ng-repeat='listItem in tdlist.list track by $index'>
+                <li ng-repeat="listItem in tdlist.list | filter: toDoFilter | orderBy: 'text' track by $index">
                     <span class="listItemClass">
                         <button type='button' class='completeButton' ng-if="!listItem.classes.completed" ng-click="tdlist.completeTask($index);">
                             Complete
